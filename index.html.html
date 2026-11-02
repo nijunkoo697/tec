@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ولت‌مارکت | فروشگاه لوازم الکترونیکی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f6; --card:#fff; --ink:#121826; --muted:#5b6478; --line:#d5dbe7;
+  --accent:#2b4bff; --accent-ink:#fff; --tag:#ffb020; --tag-ink:#3a2600;
+  --panel:#0f1830; --panel-ink:#e8ecff; --soft:#e4e9fb;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#0a0f1d;--card:#131b30;--ink:#eef1fa;--muted:#98a2bd;--line:#2a3552;--accent:#6f87ff;--accent-ink:#0a0f1d;--panel:#0c1326;--soft:#1a2547}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0a0f1d;--card:#131b30;--ink:#eef1fa;--muted:#98a2bd;--line:#2a3552;--accent:#6f87ff;--accent-ink:#0a0f1d;--panel:#0c1326;--soft:#1a2547}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem}
+.bolt{width:34px;height:34px;border-radius:9px;background:var(--tag);color:var(--tag-ink);display:grid;place-items:center}
+.search{flex:1;min-width:220px;display:flex;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);overflow:hidden}
+.search input{flex:1;border:0;background:none;padding:0 14px;height:44px;font:inherit;color:var(--ink);outline:none;min-width:0}
+.search button{border:0;background:var(--accent);color:var(--accent-ink);padding:0 18px;font-weight:700}
+.acts{display:flex;gap:8px}
+.chip{height:44px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line);background:none;color:var(--ink);display:inline-flex;align-items:center;gap:8px;font-weight:500}
+.count{background:var(--tag);color:var(--tag-ink);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.8rem;font-weight:800;padding:0 6px}
+nav{display:flex;gap:22px;overflow-x:auto;padding-bottom:10px;font-size:.92rem;color:var(--muted)}
+nav a{white-space:nowrap}nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;margin-block:24px}
+.lead{background:var(--panel);color:var(--panel-ink);border-radius:20px;padding:44px 40px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.lead svg{position:absolute;inset:0;width:100%;height:100%}
+.lead path{fill:none;stroke:#3d5bff;stroke-width:1.5;stroke-dasharray:6 8}
+.lead circle{fill:var(--tag)}
+.lead>*:not(svg){position:relative}
+.lead h1{margin:0 0 10px;font-size:2.1rem;line-height:1.45;font-weight:800;max-width:16ch}
+.lead p{margin:0 0 24px;color:#aab6e6;max-width:38ch}
+.cta{align-self:flex-start;background:var(--tag);color:var(--tag-ink);border-radius:12px;padding:12px 26px;font-weight:800}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.deal small{color:var(--muted)}
+.tile{height:150px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:4.2rem}
+.timer{display:flex;gap:8px;direction:ltr;justify-content:center}
+.timer b{background:var(--ink);color:var(--bg);border-radius:8px;padding:2px 10px;font-size:1.2rem;min-width:46px;text-align:center;font-variant-numeric:tabular-nums}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price s{color:var(--muted);font-size:.85rem}
+.price strong{font-size:1.15rem}
+.off{background:var(--tag);color:var(--tag-ink);border-radius:8px;padding:0 8px;font-size:.8rem;font-weight:800}
+h2{font-size:1.35rem;margin:36px 0 14px;font-weight:800}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 8px;text-align:center;font-size:.9rem;font-weight:500}
+.cat span{display:block;font-size:2rem}
+.cat:hover{border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.p .tile{height:130px;font-size:3.4rem}
+.p h3{margin:0;font-size:.95rem;font-weight:500;min-height:3.2em}
+.p .add{margin-top:auto;border:0;border-radius:10px;height:40px;background:var(--accent);color:var(--accent-ink);font-weight:700}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+.perk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;font-size:.9rem}
+.perk b{display:block}.perk span{color:var(--muted)}
+footer{margin-top:40px;background:var(--panel);color:#aab6e6;padding:28px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin-inline:auto;width:max-content;max-width:90%;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}
+.toast.on{opacity:1;transform:none}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.cats{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.perks{grid-template-columns:repeat(2,1fr)}.lead{padding:30px 24px}.lead h1{font-size:1.6rem}}
+body{background:radial-gradient(60% 40% at 90% -5%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%),var(--bg)}
+.lead{background:radial-gradient(120% 90% at 85% 0%,#22337a 0%,var(--panel) 60%)}
+.tile{background:radial-gradient(circle at 50% 35%,color-mix(in srgb,var(--accent) 22%,var(--card)),var(--soft) 75%)}
+.deal{box-shadow:0 22px 40px -26px rgba(43,75,255,.55)}
+h2{display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:6px;height:22px;border-radius:3px;background:linear-gradient(var(--accent),var(--tag))}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}}
+@keyframes flow{to{stroke-dashoffset:-56}}
+@keyframes pulse{50%{transform:scale(2);opacity:.45}}
+@keyframes float{50%{transform:translateY(-12px) rotate(-5deg)}}
+@keyframes pop{50%{transform:scale(1.14)}}
+@keyframes tk{50%{background:var(--accent);color:var(--accent-ink)}}
+@keyframes shine{40%,100%{transform:translateX(130%)}}
+@keyframes bump{40%{transform:scale(1.6)}}
+@keyframes zap{0%,88%,100%{transform:none}91%{transform:rotate(-14deg) scale(1.12)}95%{transform:rotate(10deg) scale(1.12)}}
+.lead path{animation:flow 2.4s linear infinite}
+.lead circle{transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-in-out infinite}
+.lead circle:nth-of-type(2){animation-delay:.6s}.lead circle:nth-of-type(3){animation-delay:1.2s}.lead circle:nth-of-type(4){animation-delay:1.8s}
+.lead h1,.lead p,.lead .cta{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.lead p{animation-delay:.12s}.lead .cta{animation-delay:.26s}
+.deal{animation:rise .9s .25s cubic-bezier(.2,.7,.2,1) both}
+.fl{display:inline-block;animation:float 3.6s ease-in-out infinite;filter:drop-shadow(0 12px 14px rgba(43,75,255,.35))}
+.off{animation:pop 1.8s ease-in-out infinite}
+#ss{animation:tk 1s ease-in-out infinite}
+.bolt{animation:zap 4s ease-in-out infinite}
+.cta{transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(255,176,32,.7)}
+.lead .cta{overflow:hidden}
+.lead .cta::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.6) 50%,transparent 65%);transform:translateX(-130%);animation:shine 3.4s 1.4s infinite}
+.rv{opacity:0;transform:translateY(26px) scale(.97);transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s}
+.rv.in{opacity:1;transform:none}
+.p.in:hover,.cat.in:hover{transform:translateY(-6px);box-shadow:0 20px 36px -16px rgba(18,24,38,.4);border-color:var(--accent)}
+.em,.cat span{display:inline-block;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.cat span{display:block}
+.p:hover .em,.cat:hover span{transform:scale(1.22) rotate(-8deg)}
+.add{transition:background .2s,transform .1s}.add:active{transform:scale(.96)}
+.p .add.ok{background:#0f9d63;color:#fff}
+.count.bump{animation:bump .4s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top"><span class="bolt" aria-hidden="true">⚡</span>ولت‌مارکت</a>
+      <form class="search" id="sf" role="search"><input type="text" id="q" placeholder="جستجوی کالا، برند یا دسته‌بندی" aria-label="جستجو"><button type="submit">جستجو</button></form>
+      <div class="acts">
+        <a class="chip" href="https://claude.ai/artifact/GjFzPuSCwS9dgkQXttBJoi">ورود | ثبت‌نام</a>
+        <button class="chip" id="cart" type="button" aria-label="سبد خرید">🛒 سبد خرید <span class="count" id="cnt">۰</span></button>
+      </div>
+    </div>
+    <nav aria-label="دسته‌بندی‌ها"><a href="#cats">موبایل</a><a href="#cats">لپ‌تاپ</a><a href="#cats">صوتی و تصویری</a><a href="#cats">ساعت هوشمند</a><a href="#cats">دوربین</a><a href="#cats">کنسول بازی</a><a href="#sale">تخفیف‌های ویژه</a></nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <div class="lead">
+      <svg viewBox="0 0 500 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-10 290 H140 L180 250 H320 L360 290 H510"/><path d="M-10 330 H100 L140 350 H330 L370 330 H510"/><path d="M260 250 V170 L300 130 H510"/><circle cx="180" cy="250" r="4"/><circle cx="360" cy="290" r="4"/><circle cx="300" cy="130" r="4"/></svg>
+      <h1>هر وسیلهٔ دیجیتال، اصل و با گارانتی</h1>
+      <p>از هدفون و ساعت هوشمند تا لپ‌تاپ؛ با ارسال سریع و ۷ روز ضمانت بازگشت کالا.</p>
+      <a class="cta" href="#sale">مشاهدهٔ تخفیف‌ها</a>
+    </div>
+    <aside class="deal" aria-label="پیشنهاد ویژهٔ امروز">
+      <small>پیشنهاد ویژهٔ امروز</small>
+      <div class="tile" aria-hidden="true"><span class="fl">🎧</span></div>
+      <strong>هدفون بی‌سیم نویزکنسلینگ ولت‌ساند</strong>
+      <div class="price"><s id="d-old"></s><strong id="d-new"></strong><span class="off">۲۵٪</span></div>
+      <div class="timer" id="tm" aria-label="زمان باقی‌مانده"><b id="hh">00</b><b id="mm">00</b><b id="ss">00</b></div>
+      <button class="cta" style="align-self:stretch;border:0;text-align:center" id="dealAdd" type="button">افزودن به سبد</button>
+    </aside>
+  </section>
+
+  <h2 id="cats">دسته‌بندی‌ها</h2>
+  <div class="cats">
+    <a class="cat" href="#sale"><span>📱</span>موبایل</a><a class="cat" href="#sale"><span>💻</span>لپ‌تاپ</a>
+    <a class="cat" href="#sale"><span>🎧</span>صوتی و تصویری</a><a class="cat" href="#sale"><span>⌚</span>ساعت هوشمند</a>
+    <a class="cat" href="#sale"><span>📷</span>دوربین</a><a class="cat" href="#sale"><span>🎮</span>کنسول بازی</a>
+  </div>
+
+  <h2 id="sale">پرفروش‌ترین‌ها</h2>
+  <div class="grid" id="grid"></div>
+
+  <div class="perks">
+    <div class="perk"><b>ارسال سریع</b><span>به سراسر کشور</span></div>
+    <div class="perk"><b>گارانتی معتبر</b><span>ضمانت اصالت کالا</span></div>
+    <div class="perk"><b>۷ روز بازگشت</b><span>بدون پرسش اضافه</span></div>
+    <div class="perk"><b>پشتیبانی فنی</b><span>پس از خرید</span></div>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© ولت‌مارکت. قیمت‌ها و کالاها نمونهٔ نمایشی هستند.</span><span>تلفن پشتیبانی: ۰۲۱-۱۲۳۴۵۶۷۸</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var fa=function(n){return Number(n).toLocaleString('fa-IR')};
+  var items=[
+    {i:'📱',n:'گوشی هوشمند ولت‌فون ۱۲۸ گیگابایت',p:24900000},
+    {i:'💻',n:'لپ‌تاپ سبک ۱۴ اینچی ولت‌بوک',p:41500000},
+    {i:'⌚',n:'ساعت هوشمند ولت‌واچ مدل اسپرت',p:6800000},
+    {i:'📷',n:'دوربین بدون آینه ۲۴ مگاپیکسل',p:33200000},
+    {i:'🎮',n:'کنسول بازی خانگی با دو دسته',p:19700000},
+    {i:'🔊',n:'اسپیکر بلوتوثی ضدآب',p:2950000},
+    {i:'🔋',n:'پاوربانک ۲۰۰۰۰ میلی‌آمپر',p:1350000},
+    {i:'⌨️',n:'کیبورد مکانیکی بی‌سیم',p:3400000}
+  ];
+  var n=0,cnt=document.getElementById('cnt'),t=document.getElementById('toast'),tt;
+  function toast(m){t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('on')},1800)}
+  function add(name){n++;cnt.textContent=fa(n);cnt.classList.remove('bump');void cnt.offsetWidth;cnt.classList.add('bump');toast('«'+name+'» به سبد خرید اضافه شد')}
+  var g=document.getElementById('grid');
+  items.forEach(function(x){
+    var d=document.createElement('article');d.className='p';
+    d.innerHTML='<div class="tile" aria-hidden="true"><span class="em">'+x.i+'</span></div><h3></h3><div class="price"><strong>'+fa(x.p)+' تومان</strong></div><button class="add" type="button">افزودن به سبد</button>';
+    d.querySelector('h3').textContent=x.n;
+    d.querySelector('.add').addEventListener('click',function(){add(x.n);var b=this;b.textContent='✓ اضافه شد';b.classList.add('ok');setTimeout(function(){b.textContent='افزودن به سبد';b.classList.remove('ok')},1200)});
+    g.appendChild(d);
+  });
+  document.getElementById('d-old').textContent=fa(8600000)+' تومان';
+  document.getElementById('d-new').textContent=fa(6450000)+' تومان';
+  document.getElementById('dealAdd').addEventListener('click',function(){add('هدفون ولت‌ساند')});
+  document.getElementById('cart').addEventListener('click',function(){toast(n?fa(n)+' کالا در سبد خرید شماست':'سبد خرید خالی است')});
+  document.getElementById('sf').addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('q').value.trim();toast(v?'نتیجهٔ جستجو برای «'+v+'» (نمونهٔ نمایشی)':'عبارتی برای جستجو وارد کنید')});
+  var p=function(x){return (x<10?'0':'')+x};
+  function tick(){var d=new Date(),e=new Date(d);e.setHours(24,0,0,0);var s=Math.floor((e-d)/1000);
+    document.getElementById('hh').textContent=p(Math.floor(s/3600));document.getElementById('mm').textContent=p(Math.floor(s%3600/60));document.getElementById('ss').textContent=p(s%60)}
+  tick();setInterval(tick,1000);
+  var els=document.querySelectorAll('.p,.cat,.perk');
+  els.forEach(function(el){el.classList.add('rv');el.style.transitionDelay=(Array.prototype.indexOf.call(el.parentNode.children,el)%6)*70+'ms'});
+  function show(el){el.classList.add('in');setTimeout(function(){el.style.transitionDelay=''},1100)}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target)}})},{threshold:.15});els.forEach(function(el){io.observe(el)})}else{els.forEach(show)}
+})();
+</script>
+</body>
+</html>
